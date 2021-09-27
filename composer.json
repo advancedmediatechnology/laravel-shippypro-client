@@ -1,13 +1,13 @@
 {
-    "name": "yax/laravel-shippy-pro-connector",
+    "name": "advancedmediatechnology/laravel-shippy-pro-connector",
     "description": "Shippypro Connector for Laravel",
     "type": "library",
     "minimum-stability": "dev",
     "license": "MIT",
     "authors": [
         {
-            "name": "Yax interactive",
-            "email": "office@yaxint.com"
+            "name": "AMT Advanced Media Technology",
+            "email": "dev2@amtitalia.com"
         }
     ],
     "require": {
