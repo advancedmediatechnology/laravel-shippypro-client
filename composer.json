@@ -14,11 +14,11 @@
         "guzzlehttp/guzzle": "^6.4",
         "php": "^7.2",
         "laravel/framework": "^7.0",
-        "laravel/tinker": "^1.0"
+        "laravel/tinker": "^2.0"
     },
     "autoload": {
         "psr-4": {
-            "yax\\ShippyProConnector\\": "src/"
+            "advancedmediatechnology\\ShippyProConnector\\": "src/"
         }
     }
 }
