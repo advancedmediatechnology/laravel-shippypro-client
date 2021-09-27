@@ -190,7 +190,11 @@ class ShippyproShipment
             'CarrierID' => ($this->CarrierID) ? (integer) $this->CarrierID : null,
             'OrderID' => ($this->OrderID) ? $this->OrderID : null,
             'RateID' => ($this->RateID) ? $this->RateID : null,
-            'CN22Info' => ($this->CN22Info)? $this->CN22Info : null
+            'CN22Info' => ($this->CN22Info)? $this->CN22Info : null,
+#            'CN22Info' => ($this->CN22Info)? $this->CN22Info : null,
+            'Note' => '',
+            'Incoterm' => 'DAP',
+            'BillAccountNumber' => ''
         ];
     }
 }
