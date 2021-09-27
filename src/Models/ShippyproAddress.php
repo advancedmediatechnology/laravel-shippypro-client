@@ -1,6 +1,6 @@
 <?php
 
-namespace yax\ShippyProConnector\Models;
+namespace advancedmediatechnology\ShippyProConnector\Models;
 
 class ShippyproAddress{
 

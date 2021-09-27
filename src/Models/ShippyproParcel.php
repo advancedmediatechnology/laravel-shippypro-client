@@ -1,6 +1,6 @@
 <?php
 
-namespace yax\ShippyProConnector\Models;
+namespace advancedmediatechnology\ShippyProConnector\Models;
 class ShippyproParcel{
     public $length, $width, $height, $weight;
     public function __construct($length, $width, $height, $weight)

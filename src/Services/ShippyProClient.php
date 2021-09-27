@@ -1,10 +1,10 @@
 <?php
 
-namespace yax\ShippyProConnector\Services;
-use yax\ShippyProConnector\Models\ShippyproAddress;
-use yax\ShippyProConnector\Models\ShippyproShipment;
+namespace advancedmediatechnology\ShippyProConnector\Services;
+use advancedmediatechnology\ShippyProConnector\Models\ShippyproAddress;
+use advancedmediatechnology\ShippyProConnector\Models\ShippyproShipment;
 use Illuminate\Support\Collection;
-use yax\ShippyProConnector\Services\ShippyProRequest;
+use advancedmediatechnology\ShippyProConnector\Services\ShippyProRequest;
 
 /**
  * Shippypro Client that allows to communicate between Model and Request classes

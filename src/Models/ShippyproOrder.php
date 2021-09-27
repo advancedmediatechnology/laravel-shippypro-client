@@ -1,7 +1,7 @@
 <?php
 
-namespace yax\ShippyProConnector\Models;
-use yax\ShippyProConnector\Services\ShippyProClient;
+namespace advancedmediatechnology\ShippyProConnector\Models;
+use advancedmediatechnology\ShippyProConnector\Services\ShippyProClient;
 
 class ShippyproOrder{
     public $OrderID, $LabelURL, $PDF, $ZPL, $CarrierID, $MarketPlacePlatform, $TransactionID, $TrackingCarrier, $TrackingNumber, $TrackingExternalLink, $AdditionalTrackingNumbers, $Status;

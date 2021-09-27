@@ -1,5 +1,5 @@
 <?php
-namespace yax\ShippyProConnector;
+namespace advancedmediatechnology\ShippyProConnector;
 
 class ShippyproServiceProvider extends \Illuminate\Support\ServiceProvider{
     public function boot(){
