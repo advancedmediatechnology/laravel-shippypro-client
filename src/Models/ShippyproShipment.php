@@ -8,13 +8,14 @@ use phpDocumentor\Reflection\Types\Integer;
 class ShippyproShipment
 {
     protected $from_address, $to_address, $parcels;
-    protected $Insurance = 0, $InsuranceCurrency = "EUR", $CashOnDelivery = 0, $CashOnDeliveryCurrency="EUR", $ContentDescription, $TotalValue, $ShippingService = "Standard", $RateCarriers;
+    protected $Insurance = 0, $InsuranceCurrency = "EUR", $CashOnDelivery = 0, $CashOnDeliveryCurrency="EUR", $ShipmentCost, $ContentDescription, $TotalValue, $ShippingService = "Standard", $RateCarriers;
     protected $TransactionID, $CarrierName, $CarrierService, $CarrierID, $OrderID, $RateID, $CN22Info;
     protected $client;
-    public function __construct(float $TotalValue, $ContentDescription)
+    public function __construct(float $TotalValue,  $ContentDescription, float $ShipmentCost,)
     {
         $this->client = new ShippyProClient();
         $this->TotalValue = $TotalValue;
+        $this->ShipmentCost = $ShipmentCost;
         $this->ContentDescription = $ContentDescription;
         $this->parcels = collect();
     }
@@ -191,7 +192,8 @@ class ShippyproShipment
             'OrderID' => ($this->OrderID) ? $this->OrderID : null,
             'RateID' => ($this->RateID) ? $this->RateID : null,
             'CN22Info' => ($this->CN22Info)? $this->CN22Info : null,
-#            'CN22Info' => ($this->CN22Info)? $this->CN22Info : null,
+            #            'CN22Info' => ($this->CN22Info)? $this->CN22Info : null,
+            'ShipmentCost' => $this->ShipmentCost,
             'Note' => '',
             'Incoterm' => 'DAP',
             'BillAccountNumber' => ''
