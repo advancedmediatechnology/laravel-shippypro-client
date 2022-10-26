@@ -11,7 +11,7 @@ class ShippyproShipment
     protected $Insurance = 0, $InsuranceCurrency = "EUR", $CashOnDelivery = 0, $CashOnDeliveryCurrency="EUR", $ShipmentCost, $ContentDescription, $TotalValue, $ShippingService = "Standard", $RateCarriers;
     protected $TransactionID, $CarrierName, $CarrierService, $CarrierID, $OrderID, $RateID, $CN22Info;
     protected $client;
-    public function __construct(float $TotalValue,  $ContentDescription, float $ShipmentCost,)
+    public function __construct(float $TotalValue,  $ContentDescription, float $ShipmentCost)
     {
         $this->client = new ShippyProClient();
         $this->TotalValue = $TotalValue;
@@ -194,6 +194,7 @@ class ShippyproShipment
             'CN22Info' => ($this->CN22Info)? $this->CN22Info : null,
             #            'CN22Info' => ($this->CN22Info)? $this->CN22Info : null,
             'ShipmentCost' => $this->ShipmentCost,
+            'ShipmentAmountPaid' => $this->ShipmentCost,
             'Note' => '',
             'Incoterm' => 'DAP',
             'BillAccountNumber' => ''
