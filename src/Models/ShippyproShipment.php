@@ -99,8 +99,8 @@ class ShippyproShipment
      *
      * @return self Shipment object
      */
-    public function setCashOnDelivery($currency) : self{
-        $this->CashOnDelivery = 1;
+    public function setCashOnDelivery($currency,$value = 1) : self{
+        $this->CashOnDelivery = $value;
         $this->CashOnDeliveryCurrency = $currency;
         return $this;
     }
