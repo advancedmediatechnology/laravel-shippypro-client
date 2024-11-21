@@ -29,8 +29,8 @@ class ShippyproOrder{
      *
      * @return ShippyproOrder Order object
      */
-    public static function getOrder($id){
-        $client = new ShippyProClient();
+    public static function getOrder($id, $api_key = 'default'){
+        $client = new ShippyProClient($api_key);
         $res = $client->order($id);
         $order = new ShippyproOrder($res);
         return $order;

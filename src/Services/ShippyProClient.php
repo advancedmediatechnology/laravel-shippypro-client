@@ -13,9 +13,9 @@ use advancedmediatechnology\ShippyProConnector\Services\ShippyProRequest;
 class ShippyProClient{
     protected $request;
 
-    public function __construct()
+    public function __construct($api_key = 'default')
     {
-        $this->request = new ShippyProRequest();
+        $this->request = new ShippyProRequest($api_key);
     }
 
     /**

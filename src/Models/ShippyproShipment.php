@@ -11,9 +11,9 @@ class ShippyproShipment
     protected $Insurance = 0, $InsuranceCurrency = "EUR", $CashOnDelivery = 0, $CashOnDeliveryCurrency="EUR", $ShipmentCost, $ContentDescription, $TotalValue, $ShippingService = "Standard", $RateCarriers;
     protected $TransactionID, $CarrierName, $CarrierService, $CarrierID, $OrderID, $RateID, $CN22Info;
     protected $client;
-    public function __construct(float $TotalValue,  $ContentDescription, float $ShipmentCost)
+    public function __construct(float $TotalValue,  $ContentDescription, float $ShipmentCost, $api_key = 'default')
     {
-        $this->client = new ShippyProClient();
+        $this->client = new ShippyProClient($api_key);
         $this->TotalValue = $TotalValue;
         $this->ShipmentCost = $ShipmentCost;
         $this->ContentDescription = $ContentDescription;

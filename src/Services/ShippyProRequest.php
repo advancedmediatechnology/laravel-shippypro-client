@@ -7,9 +7,14 @@ class ShippyProRequest{
     protected $api_key, $headers;
     private $endpoint = 'https://www.shippypro.com/api';
 
-    public function __construct()
+    public function __construct($api_key = 'default')
     {
-        $this->api_key = config('shippypro.api_key');
+        if ($api_key == 'default') {
+            $this->api_key = config('shippypro.api_key');
+        } else {
+            $this->api_key = $api_key;
+        }
+        
         $this->setHeaders();
     }
 
