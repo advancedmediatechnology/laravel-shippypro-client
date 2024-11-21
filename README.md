@@ -9,7 +9,7 @@ Add folowing line to config/app.php to providers array
 ```php
 'providers' => [
     ...
-    \yax\ShippyProConnector\ShippyproServiceProvider::class
+    \advancedmediatechnology\ShippyProConnector\ShippyproServiceProvider::class
 ],
 ```
 
