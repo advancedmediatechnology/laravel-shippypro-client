@@ -9,7 +9,7 @@ class ShippyproShipment
 {
     protected $from_address, $to_address, $parcels;
     protected $Insurance = 0, $InsuranceCurrency = "EUR", $CashOnDelivery = 0, $CashOnDeliveryCurrency="EUR", $ShipmentCost, $ContentDescription, $TotalValue, $ShippingService = "Standard", $RateCarriers;
-    protected $TransactionID, $CarrierName, $CarrierService, $CarrierID, $OrderID, $RateID, $CN22Info;
+    protected $TransactionID, $CarrierName, $CarrierService, $CarrierID, $OrderID, $RateID, $CN22Info, $Note;
     protected $client;
     public function __construct(float $TotalValue,  $ContentDescription, float $ShipmentCost, $api_key = 'default')
     {
@@ -105,6 +105,11 @@ class ShippyproShipment
         return $this;
     }
 
+    public function setNote($value = '')  : self {
+        $this->Note = $value;
+        return $this;
+    }
+
     /**
      * Set transaction ID
      *
@@ -195,7 +200,7 @@ class ShippyproShipment
             #            'CN22Info' => ($this->CN22Info)? $this->CN22Info : null,
             'ShipmentCost' => $this->ShipmentCost,
             'ShipmentAmountPaid' => $this->ShipmentCost,
-            'Note' => '',
+            'Note' => $this->Note,
             'Incoterm' => 'DAP',
             'BillAccountNumber' => ''
         ];
